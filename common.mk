@@ -205,6 +205,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librqbalance
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    device/sony/common/overlay
+
 # PRODUCT_PLATFORM isn't set yet, thus we check the available path
 ifneq (,$(filter %loire %tone %yoshino,$(PLATFORM_COMMON_PATH)))
 ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
