@@ -17,8 +17,8 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
     # Enable subsystem restart
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
