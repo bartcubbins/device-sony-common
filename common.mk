@@ -16,7 +16,7 @@
 TARGET_VENDOR_VERSION := 6
 
 # Common path
-COMMON_PATH := device/sony/common
+COMMON_PATH := device/sony/common-legacy
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
@@ -380,4 +380,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_CUSTOM_IMAGE_MAKEFILES := $(COMMON_PATH)/odm.mk
 
-$(call inherit-product, device/sony/common/treble.mk)
+$(call inherit-product, device/sony/common-legacy/treble.mk)
