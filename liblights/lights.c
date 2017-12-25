@@ -18,7 +18,6 @@
 #define LOG_TAG "lights.sony"
 
 #include <cutils/log.h>
-#include <cutils/properties.h>
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -38,8 +37,6 @@
 /******************************************************************************/
 
 #define DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS 255
-
-#define LP_MODE_BRIGHTNESS_PROPERTY "sys.display.low_persistence_mode_brightness"
 
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
@@ -171,10 +168,8 @@ set_light_backlight(struct light_device_t* dev,
                         strerror(errno));
             }
             if (lpEnabled != 0) {
-                // Try to get the brigntess though property, otherwise it will
-                // set the default brightness, which is defined in BoardConfig.mk.
-                brightness = property_get_int32(LP_MODE_BRIGHTNESS_PROPERTY,
-                        DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS);
+                // This is defined in BoardConfig.mk.
+                brightness = DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS;
             }
         }
         g_last_backlight_mode = state->brightnessMode;
