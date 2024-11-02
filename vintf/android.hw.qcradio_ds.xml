@@ -1,4 +1,4 @@
-<manifest version="4.0" type="device">
+<manifest version="5.0" type="device">
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
@@ -6,5 +6,100 @@
         <fqname>@1.2::ISap/slot2</fqname>
         <fqname>@1.5::IRadio/slot1</fqname>
         <fqname>@1.5::IRadio/slot2</fqname>
+    </hal>
+
+
+    <hal format="aidl">
+        <name>vendor.qti.hardware.radio.ims</name>
+        <version>9</version>
+        <fqname>IImsRadio/imsradio0</fqname>
+        <fqname>IImsRadio/imsradio1</fqname>
+    </hal>
+
+    <hal format="aidl">
+        <name>vendor.qti.hardware.radio.am</name>
+        <version>1</version>
+        <fqname>IQcRilAudio/slot1</fqname>
+        <fqname>IQcRilAudio/slot2</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.radio.qtiradioconfig</name>
+        <version>2</version>
+        <fqname>IQtiRadioConfig/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.radio.qcrilhook</name>
+        <version>1</version>
+        <fqname>IQtiOemHook/oemhook0</fqname>
+        <fqname>IQtiOemHook/oemhook1</fqname>
+    </hal>
+
+
+
+
+
+    <hal format="aidl">
+       <name>android.hardware.radio.data</name>
+       <interface>
+           <name>IRadioData</name>
+           <instance>slot1</instance>
+           <instance>slot2</instance>
+       </interface>
+    </hal>
+    <hal format="aidl">
+       <name>android.hardware.radio.ims</name>
+       <interface>
+           <name>IRadioIms</name>
+           <instance>slot1</instance>
+           <instance>slot2</instance>
+       </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.messaging</name>
+        <interface>
+            <name>IRadioMessaging</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.modem</name>
+        <interface>
+            <name>IRadioModem</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.network</name>
+        <interface>
+            <name>IRadioNetwork</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.sim</name>
+        <interface>
+            <name>IRadioSim</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.voice</name>
+        <interface>
+            <name>IRadioVoice</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+
+    <hal format="aidl">
+        <name>android.hardware.radio.config</name>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </manifest>
