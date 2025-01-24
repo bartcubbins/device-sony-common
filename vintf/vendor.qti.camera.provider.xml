@@ -6,9 +6,10 @@
             <instance>vendor_qti/0</instance>
         </interface>
     </hal>
-    <hal format="aidl">
+    <hal format="hidl">
         <name>android.hardware.camera.provider</name>
-        <version>1</version>
+        <transport>hwbinder</transport>
+        <version>2.5</version>
         <interface>
             <name>ICameraProvider</name>
             <instance>external/0</instance>

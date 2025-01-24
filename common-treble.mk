@@ -59,7 +59,8 @@ endif
 
 # External Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-V1-external-service
+    android.hardware.camera.provider@2.5-external \
+    android.hardware.camera.provider@2.5-external-service
 
 # Media
 PRODUCT_PACKAGES += \
