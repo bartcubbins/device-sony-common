@@ -51,7 +51,6 @@ SONY_BUILD_SYMLINKS := $(COMMON_PATH)/sony_build_symlinks.mk
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayCommon \
     FrameworkOverlayCommon \
-    SettingsLibOverlayCommon \
     SettingsOverlayCommon \
     SettingsProviderOverlayCommon \
     SystemUIOverlayCommon \
