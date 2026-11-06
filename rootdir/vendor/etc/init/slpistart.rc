@@ -6,4 +6,5 @@ service vendor.slpistart_sh /vendor/bin/init.qcom.dspstart.sh slpi
 
 # Start DSP services as soon as partitions are mounted
 on property:vendor.init.earlymount.ready=1
+    chown system system /sys/kernel/boot_slpi/boot
     start vendor.slpistart_sh

@@ -6,4 +6,5 @@ service vendor.adspstart_sh /vendor/bin/init.qcom.dspstart.sh adsp
 
 # Start DSP services as soon as partitions are mounted
 on property:vendor.init.earlymount.ready=1
+    chown system system /sys/kernel/boot_adsp/boot
     start vendor.adspstart_sh

@@ -6,4 +6,5 @@ service vendor.cdspstart_sh /vendor/bin/init.qcom.dspstart.sh cdsp
 
 # Start DSP services as soon as partitions are mounted
 on property:vendor.init.earlymount.ready=1
+    chown system system /sys/kernel/boot_cdsp/boot
     start vendor.cdspstart_sh
